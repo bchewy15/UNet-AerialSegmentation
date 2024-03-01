@@ -131,3 +131,5 @@ dmypy.json
 
 # Image folder
 /Semantic segmentation dataset
+*.jpg
+*.png
