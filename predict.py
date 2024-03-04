@@ -2,7 +2,6 @@ import torch
 import torchvision.transforms as transforms
 from PIL import Image
 from model import UNet
-import numpy as np
 import matplotlib.pyplot as plt
 import os
 import sys
@@ -33,7 +32,7 @@ if __name__ == '__main__':
 
     image_path = sys.argv[1]
     if not os.path.exists(image_path):
-        print("Image file not found.")
+        print("Image file not found: ", image_path)
         sys.exit(1)
 
     predicted_image = predict_single_image(image_path, model)

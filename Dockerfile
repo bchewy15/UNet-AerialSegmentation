@@ -4,11 +4,11 @@ FROM python:3-slim
 WORKDIR /app
 
 # not taking everything
-COPY requirements.txt .
+COPY docker-reqs.txt .
 COPY predict.py .
 COPY model.py .
 COPY saved_models/unetSeg.pt saved_models/unetSeg.pt
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r docker-reqs.txt
 
 CMD ["python", "predict.py"]
