@@ -14,6 +14,8 @@ transform = transforms.Compose([
 # load the model
 model = UNet(n_channels=3, n_classes=6, bilinear=True).to(device)
 model.load_state_dict(torch.load('saved_models/unet_epoch_7_0.60017.pt'))
+# could set train.py to save model rather than state_dict, that may shrink docker image a bit
+# model = torch.load('saved_models/unet_epoch_7_0.60017.pt').to(device)
 model.eval()
 
 # run inference on one image

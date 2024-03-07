@@ -11,6 +11,8 @@ from losses import FocalLoss, mIoULoss
 from model import UNet
 from dataloader import segDataset
 
+print(torch.cuda.is_available())
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def get_args():
