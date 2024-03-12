@@ -45,4 +45,4 @@ if __name__ == '__main__':
 
     plt.imshow(predicted_image)
     plt.axis('off')
-    plt.savefig(predict_path)
+    plt.savefig(predict_path, bbox_inches='tight', pad_inches=0)
