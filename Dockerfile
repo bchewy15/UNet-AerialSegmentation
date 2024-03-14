@@ -9,6 +9,7 @@ COPY predict.py .
 COPY model.py .
 COPY saved_models/unetSeg.pt saved_models/unetSeg.pt
 
+RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 RUN pip install --no-cache-dir -r docker-reqs.txt
 
 CMD ["python", "predict.py"]

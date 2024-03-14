@@ -12,7 +12,7 @@ Read the article at [Towards data science](https://towardsdatascience.com/u-net-
 On Windows
 ```
 docker build -t image-predictor .
-winpty docker run -v "${PWD}"/images:/app/images -v "${PWD}"/predictions:/app/predictions image-predictor python predict.py images/IMAGENAME.jpg
+winpty docker run -v "${PWD}"/images:/app/images -v "${PWD}"/predictions:/app/predictions --gpus all image-predictor python predict.py images/IMAGENAME.jpg
 ```
 
 ## Data Classes
